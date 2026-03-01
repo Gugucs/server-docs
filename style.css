@@ -1,0 +1,16 @@
+body {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.7;
+}
+h1, h2, h3 { color: #4a9fe5; }
+a { color: #6db3f2; }
+hr { border-color: #333; }
+code { background: #2a2a3e; padding: 0.2em 0.4em; border-radius: 3px; }
+img { max-width: 100%; border-radius: 8px; }
+strong { color: #f0f0f0; }
+li { margin-bottom: 0.3em; }
