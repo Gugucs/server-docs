@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Gugucs Mac mini Home Server</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Gugucs Mac mini Home Server</h1>
+</header>
+<h1 id="gugucs-mac-mini-home-server">Gugucs Mac mini Home Server</h1>
+<p>Mac mini M4 を24時間稼働のホームサーバーとして運用しています。</p>
+<hr />
+<h2 id="hardware">Hardware</h2>
+<ul>
+<li><strong>Model</strong>: Mac mini (M4, 2024)</li>
+<li><strong>Chip</strong>: Apple M4 (10-core CPU / 10-core GPU / 16-core
+Neural Engine)</li>
+<li><strong>Memory</strong>: 16GB Unified Memory</li>
+<li><strong>Storage</strong>: 256GB SSD</li>
+<li><strong>Network</strong>: Wi-Fi 6E / Bluetooth 5.3 / Gigabit
+Ethernet</li>
+</ul>
+<hr />
+<h2 id="architecture-overview">Architecture Overview</h2>
+<figure>
+<img src="network-diagram-public.svg" alt="Network Diagram" />
+<figcaption aria-hidden="true">Network Diagram</figcaption>
+</figure>
+<p>サーバーは3つのネットワーク経路でアクセスされます：</p>
+<p><strong>External Access (Internet)</strong> Cloudflare Tunnel +
+Cloudflare Access
+を使い、インターネットから安全にサービスを公開。全アクセスにメール認証を要求（一部APIはバイパス）。</p>
+<p><strong>Internal Access (Tailscale VPN)</strong> WireGuard ベースの
+Tailscale でプライベートネットワークを構築。Caddy リバースプロキシと
+AdGuard Home DNS を組み合わせて、<code>.ailin</code>
+ドメインで内部サービスに HTTPS アクセス。自己署名
+CA（有効期限約10年）を各デバイスにインストール済み。</p>
+<p><strong>DNS</strong> AdGuard Home を DNS
+サーバーとして運用。広告ブロック + 内部ドメインの名前解決を担当。上流は
+Quad9（プライバシー重視）、フォールバックに Cloudflare。</p>
+<hr />
+<h2 id="services">Services</h2>
+<h3 id="password-manager-vaultwarden">Password Manager —
+Vaultwarden</h3>
+<p>Bitwarden
+互換のセルフホスト型パスワードマネージャー。ブラウザ拡張・モバイルアプリから利用可能。毎日自動バックアップ。</p>
+<h3 id="dashboard-homepage">Dashboard — Homepage</h3>
+<p>サーバーの状態、CPU/メモリ使用率、Docker
+コンテナの状況、為替・株価・暗号資産の市場データをリアルタイム表示するダッシュボード。</p>
+<h3 id="monitoring-uptime-kuma">Monitoring — Uptime Kuma</h3>
+<p>全サービスの死活監視。ダウン時は LINE
+に自動通知。ステータスページを公開。</p>
+<h3 id="ai-bot-openclaw-gateway-ai-阿琳">AI Bot — OpenClaw Gateway (AI
+阿琳)</h3>
+<p>LINE と Discord で動く AI チャットボット。Google Gemini 2.5 Flash
+を使用。主な機能： - 日常会話・質問応答 - 毎朝の AI ニュース配信（LINE）
+- 紙の書類をスキャン → PDF 変換 → OCR → Google Drive に自動分類保存 -
+天気予報 - Discord サーバー管理</p>
+<h3 id="git-server-forgejo">Git Server — Forgejo</h3>
+<p>プライベート Git サーバー。GitHub
+のセルフホスト版のようなもの。サーバー構成ドキュメントや AI Bot
+のワークスペースをバージョン管理。Tailscale
+内部からのみアクセス可能。</p>
+<h3 id="speed-test-openspeedtest">Speed Test — OpenSpeedTest</h3>
+<p>HTML5
+ベースのネットワーク速度測定ツール。外部サービスを使わずにサーバーとの回線速度を計測可能。</p>
+<h3 id="dns-ad-blocker-adguard-home">DNS &amp; Ad Blocker — AdGuard
+Home</h3>
+<p>ネットワーク全体の広告ブロック + 内部ドメイン解決。Tailscale
+に接続するだけで全デバイスに適用。</p>
+<h3 id="documentation-server">Documentation Server</h3>
+<p>このドキュメントのソース Markdown を pandoc で HTML
+化し、内部サーバーで配信。ファイル変更を自動検知して即座に反映。</p>
+<h3 id="system-monitoring-glances">System Monitoring — Glances</h3>
+<p>CPU、メモリ、ディスク、ネットワーク、Docker
+コンテナの状態をリアルタイムに監視する API サーバー。Homepage
+ダッシュボードのデータソース。</p>
+<hr />
+<h2 id="tech-stack">Tech Stack</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Virtualization</td>
+<td>Colima (Lima VM)</td>
+</tr>
+<tr>
+<td>Containers</td>
+<td>Docker (5 containers)</td>
+</tr>
+<tr>
+<td>Reverse Proxy</td>
+<td>Caddy v2 (HTTPS, internal CA)</td>
+</tr>
+<tr>
+<td>Tunnel</td>
+<td>Cloudflare Tunnel + Access</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td>Tailscale (WireGuard)</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>AdGuard Home + Quad9</td>
+</tr>
+<tr>
+<td>AI Model</td>
+<td>Google Gemini 2.5 Flash (via OpenRouter)</td>
+</tr>
+<tr>
+<td>AI Framework</td>
+<td>OpenClaw</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>Forgejo</td>
+</tr>
+<tr>
+<td>Monitoring</td>
+<td>Uptime Kuma + Glances</td>
+</tr>
+<tr>
+<td>Automation</td>
+<td>launchd + cron</td>
+</tr>
+<tr>
+<td>Build</td>
+<td>pandoc (Markdown → HTML)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="devices-on-network">Devices on Network</h2>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>OS</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ailin (Mac mini)</td>
+<td>macOS</td>
+<td>Server (Exit Node)</td>
+</tr>
+<tr>
+<td>gugucs</td>
+<td>Windows</td>
+<td>Desktop PC</td>
+</tr>
+<tr>
+<td>z-fold7</td>
+<td>Android</td>
+<td>Smartphone</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="automation">Automation</h2>
+<ul>
+<li>全サービスは Mac mini 再起動後に自動起動（launchd）</li>
+<li>Vaultwarden: 毎日バックアップ、毎月アップデートチェック</li>
+<li>OpenClaw: 毎日セッション自動リセット</li>
+<li>ドキュメント: ソースファイル変更を自動検知 → HTML 再生成</li>
+<li>AI ニュース: 毎朝7時に LINE 配信</li>
+</ul>
+<hr />
+<h2 id="cost">Cost</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Monthly Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloudflare (DNS + Tunnel + Access)</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Tailscale (Personal)</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>LINE Official Account (200 msgs/month)</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>OpenRouter API (Gemini 2.5 Flash)</td>
+<td>~¥500</td>
+</tr>
+<tr>
+<td>Domain (gugucs.com)</td>
+<td>~¥100/month equivalent</td>
+</tr>
+<tr>
+<td>Electricity (Mac mini idle ~5W)</td>
+<td>~¥300</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>~¥900/month</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Last updated: 2026-03-01</em></p>
+</body>
+</html>
