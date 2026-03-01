@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" font-family="system-ui, -apple-system, sans-serif" font-size="12">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e67e22"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8e44ad"/>
+    </marker>
+    <marker id="arrow-yellow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f39c12"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="650" fill="#1a1a2e" rx="8"/>
+
+  <!-- Title -->
+  <text x="550" y="35" text-anchor="middle" fill="#eee" font-size="18" font-weight="bold">Gugucs Mac mini Home Server — Network &amp; Services</text>
+
+  <!-- ==================== INTERNET (Left) ==================== -->
+  <rect x="30" y="60" width="200" height="290" rx="8" fill="none" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.7"/>
+  <text x="130" y="82" text-anchor="middle" fill="#e67e22" font-size="13" font-weight="bold">Internet</text>
+
+  <rect x="50" y="95" width="160" height="30" rx="5" fill="#e67e22" opacity="0.15" stroke="#e67e22" stroke-width="1"/>
+  <text x="130" y="115" text-anchor="middle" fill="#e67e22" font-size="11" font-weight="bold">Cloudflare Tunnel</text>
+
+  <rect x="50" y="140" width="160" height="32" rx="4" fill="#2c1810" stroke="#e67e22" stroke-width="1"/>
+  <text x="130" y="160" text-anchor="middle" fill="#f0c090" font-size="10">vault.gugucs.com</text>
+
+  <rect x="50" y="180" width="160" height="32" rx="4" fill="#2c1810" stroke="#e67e22" stroke-width="1"/>
+  <text x="130" y="200" text-anchor="middle" fill="#f0c090" font-size="10">dash.gugucs.com</text>
+
+  <rect x="50" y="220" width="160" height="32" rx="4" fill="#2c1810" stroke="#e67e22" stroke-width="1"/>
+  <text x="130" y="240" text-anchor="middle" fill="#f0c090" font-size="10">status.gugucs.com</text>
+
+  <rect x="50" y="260" width="160" height="32" rx="4" fill="#2c1810" stroke="#e67e22" stroke-width="1"/>
+  <text x="130" y="280" text-anchor="middle" fill="#f0c090" font-size="10">openclaw.gugucs.com</text>
+
+  <rect x="50" y="305" width="160" height="30" rx="4" fill="none" stroke="#e67e22" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="130" y="324" text-anchor="middle" fill="#e67e22" font-size="9">Cloudflare Access (auth)</text>
+
+  <!-- ==================== MAC MINI (Center) ==================== -->
+  <rect x="280" y="60" width="500" height="480" rx="8" fill="#16213e" stroke="#4a6fa5" stroke-width="2"/>
+  <text x="530" y="82" text-anchor="middle" fill="#4a9fe5" font-size="14" font-weight="bold">Mac mini M4</text>
+  <text x="530" y="96" text-anchor="middle" fill="#666" font-size="9">16GB RAM · 256GB SSD · macOS</text>
+
+  <!-- ===== Native Services (LEFT) ===== -->
+  <rect x="300" y="110" width="220" height="230" rx="6" fill="#0d2618" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="410" y="130" text-anchor="middle" fill="#27ae60" font-size="11" font-weight="bold">Native Services</text>
+
+  <rect x="315" y="142" width="190" height="26" rx="3" fill="#1a3a2c" stroke="#27ae60" stroke-width="0.8"/>
+  <text x="410" y="159" text-anchor="middle" fill="#7be8a0" font-size="9">cloudflared (Tunnel)</text>
+
+  <rect x="315" y="174" width="190" height="26" rx="3" fill="#1a3a2c" stroke="#27ae60" stroke-width="0.8"/>
+  <text x="410" y="191" text-anchor="middle" fill="#7be8a0" font-size="9">OpenClaw Gateway (AI Bot)</text>
+
+  <rect x="315" y="206" width="190" height="26" rx="3" fill="#1a3a2c" stroke="#27ae60" stroke-width="0.8"/>
+  <text x="410" y="223" text-anchor="middle" fill="#7be8a0" font-size="9">Glances (System Monitor)</text>
+
+  <rect x="315" y="238" width="190" height="26" rx="3" fill="#1a3a2c" stroke="#27ae60" stroke-width="0.8"/>
+  <text x="410" y="255" text-anchor="middle" fill="#7be8a0" font-size="9">AdGuard Home (DNS)</text>
+
+  <rect x="315" y="270" width="190" height="26" rx="3" fill="#1a3a2c" stroke="#27ae60" stroke-width="0.8"/>
+  <text x="410" y="287" text-anchor="middle" fill="#7be8a0" font-size="9">Caddy (HTTPS Reverse Proxy)</text>
+
+  <rect x="315" y="302" width="190" height="26" rx="3" fill="#1a3a2c" stroke="#27ae60" stroke-width="0.8"/>
+  <text x="410" y="319" text-anchor="middle" fill="#7be8a0" font-size="9">Docs Server + Colima VM</text>
+
+  <!-- ===== Docker (RIGHT) ===== -->
+  <rect x="535" y="110" width="230" height="230" rx="6" fill="#0d1b36" stroke="#3498db" stroke-width="1.5"/>
+  <text x="650" y="130" text-anchor="middle" fill="#3498db" font-size="11" font-weight="bold">Docker Containers</text>
+
+  <rect x="550" y="142" width="200" height="26" rx="3" fill="#1a3a5c" stroke="#3498db" stroke-width="0.8"/>
+  <text x="650" y="159" text-anchor="middle" fill="#7bb8e8" font-size="9">Vaultwarden (Password Manager)</text>
+
+  <rect x="550" y="174" width="200" height="26" rx="3" fill="#1a3a5c" stroke="#3498db" stroke-width="0.8"/>
+  <text x="650" y="191" text-anchor="middle" fill="#7bb8e8" font-size="9">Homepage (Dashboard)</text>
+
+  <rect x="550" y="206" width="200" height="26" rx="3" fill="#1a3a5c" stroke="#3498db" stroke-width="0.8"/>
+  <text x="650" y="223" text-anchor="middle" fill="#7bb8e8" font-size="9">Uptime Kuma (Monitoring)</text>
+
+  <rect x="550" y="238" width="200" height="26" rx="3" fill="#1a3a5c" stroke="#3498db" stroke-width="0.8"/>
+  <text x="650" y="255" text-anchor="middle" fill="#7bb8e8" font-size="9">Forgejo (Git Server)</text>
+
+  <rect x="550" y="270" width="200" height="26" rx="3" fill="#1a3a5c" stroke="#3498db" stroke-width="0.8"/>
+  <text x="650" y="287" text-anchor="middle" fill="#7bb8e8" font-size="9">OpenSpeedTest (Speed Test)</text>
+
+  <rect x="550" y="305" width="200" height="22" rx="3" fill="none" stroke="#3498db" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="650" y="320" text-anchor="middle" fill="#557" font-size="8">all containers: auto-restart</text>
+
+  <!-- Caddy / Internal access -->
+  <rect x="300" y="358" width="465" height="80" rx="6" fill="#1a1a30" stroke="#8e44ad" stroke-width="1.2"/>
+  <text x="532" y="378" text-anchor="middle" fill="#8e44ad" font-size="11" font-weight="bold">Internal HTTPS Access (Tailscale VPN only)</text>
+  <text x="532" y="398" text-anchor="middle" fill="#b88cd8" font-size="9">Caddy reverse proxy with self-signed CA (10yr validity)</text>
+  <text x="532" y="418" text-anchor="middle" fill="#666" font-size="9">forgejo / docs / speedtest / adguard — all via internal domain</text>
+
+  <!-- DNS -->
+  <rect x="300" y="452" width="465" height="40" rx="6" fill="#1a1a20" stroke="#f39c12" stroke-width="1.2"/>
+  <text x="532" y="472" text-anchor="middle" fill="#f39c12" font-size="10" font-weight="bold">DNS: AdGuard Home (ad blocking + internal domain resolution)</text>
+  <text x="532" y="485" text-anchor="middle" fill="#888" font-size="8">Upstream: Quad9 (privacy-focused) · Fallback: Cloudflare</text>
+
+  <!-- Automation -->
+  <rect x="300" y="505" width="465" height="25" rx="4" fill="#1a1a20" stroke="#555" stroke-width="0.8"/>
+  <text x="532" y="522" text-anchor="middle" fill="#888" font-size="9">launchd (auto-start) · cron (backup, AI reset, update check)</text>
+
+  <!-- ==================== TAILSCALE (Right) ==================== -->
+  <rect x="820" y="60" width="250" height="300" rx="8" fill="none" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.7"/>
+  <text x="945" y="82" text-anchor="middle" fill="#8e44ad" font-size="13" font-weight="bold">Tailscale VPN</text>
+  <text x="945" y="97" text-anchor="middle" fill="#666" font-size="9">WireGuard encrypted · MagicDNS</text>
+
+  <rect x="840" y="115" width="210" height="35" rx="4" fill="#2a1a3a" stroke="#8e44ad" stroke-width="1"/>
+  <text x="945" y="137" text-anchor="middle" fill="#b88cd8" font-size="10" font-weight="bold">Mac mini (Server)</text>
+
+  <rect x="840" y="160" width="210" height="32" rx="4" fill="#2a1a3a" stroke="#8e44ad" stroke-width="1"/>
+  <text x="945" y="180" text-anchor="middle" fill="#b88cd8" font-size="10">Desktop PC (Windows)</text>
+
+  <rect x="840" y="202" width="210" height="32" rx="4" fill="#2a1a3a" stroke="#8e44ad" stroke-width="1"/>
+  <text x="945" y="222" text-anchor="middle" fill="#b88cd8" font-size="10">Smartphone (Android)</text>
+
+  <rect x="840" y="250" width="210" height="80" rx="4" fill="#1a1025" stroke="#8e44ad" stroke-width="0.8"/>
+  <text x="945" y="268" text-anchor="middle" fill="#8e44ad" font-size="9" font-weight="bold">Internal Services</text>
+  <text x="945" y="288" text-anchor="middle" fill="#b88cd8" font-size="9">Forgejo · Docs · SpeedTest</text>
+  <text x="945" y="304" text-anchor="middle" fill="#b88cd8" font-size="9">AdGuard Home</text>
+  <text x="945" y="320" text-anchor="middle" fill="#666" font-size="8">HTTPS via internal CA</text>
+
+  <!-- ==================== ARROWS ==================== -->
+
+  <!-- Internet → cloudflared -->
+  <line x1="210" y1="155" x2="313" y2="155" stroke="#e67e22" stroke-width="1.8" marker-end="url(#arrow-orange)"/>
+  <text x="235" y="146" fill="#e67e22" font-size="8" font-weight="bold">Cloudflare Tunnel</text>
+
+  <!-- cloudflared → Docker containers -->
+  <path d="M 507 150 L 548 150" stroke="#e67e22" stroke-width="1" stroke-dasharray="4,2" marker-end="url(#arrow-orange)"/>
+  <path d="M 507 158 C 522 170 538 182 548 187" stroke="#e67e22" stroke-width="1" stroke-dasharray="4,2" fill="none" marker-end="url(#arrow-orange)"/>
+  <path d="M 507 162 C 522 192 538 212 548 219" stroke="#e67e22" stroke-width="1" stroke-dasharray="4,2" fill="none" marker-end="url(#arrow-orange)"/>
+
+  <!-- cloudflared → OpenClaw -->
+  <line x1="350" y1="168" x2="350" y2="174" stroke="#e67e22" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrow-orange)"/>
+
+  <!-- Tailscale → Internal access -->
+  <path d="M 840 290 C 810 340 790 360 767 390" stroke="#8e44ad" stroke-width="1.5" fill="none" marker-end="url(#arrow-purple)"/>
+  <text x="795" y="340" fill="#8e44ad" font-size="8">HTTPS</text>
+
+  <!-- Tailscale → DNS -->
+  <path d="M 840 320 C 820 400 800 440 767 465" stroke="#f39c12" stroke-width="1" stroke-dasharray="4,2" fill="none" marker-end="url(#arrow-yellow)"/>
+  <text x="810" y="410" fill="#f39c12" font-size="8">DNS</text>
+
+  <!-- Legend -->
+  <rect x="30" y="565" width="1040" height="70" rx="6" fill="#111122" stroke="#333" stroke-width="1"/>
+  <text x="50" y="587" fill="#888" font-size="10" font-weight="bold">Legend</text>
+
+  <rect x="50" y="600" width="12" height="12" rx="2" fill="#e67e22" opacity="0.4" stroke="#e67e22" stroke-width="1"/>
+  <text x="68" y="611" fill="#999" font-size="9">External (Cloudflare)</text>
+
+  <rect x="200" y="600" width="12" height="12" rx="2" fill="#3498db" opacity="0.3" stroke="#3498db" stroke-width="1"/>
+  <text x="218" y="611" fill="#999" font-size="9">Docker Containers</text>
+
+  <rect x="350" y="600" width="12" height="12" rx="2" fill="#27ae60" opacity="0.3" stroke="#27ae60" stroke-width="1"/>
+  <text x="368" y="611" fill="#999" font-size="9">Native Services</text>
+
+  <rect x="500" y="600" width="12" height="12" rx="2" fill="#8e44ad" opacity="0.3" stroke="#8e44ad" stroke-width="1"/>
+  <text x="518" y="611" fill="#999" font-size="9">Tailscale VPN</text>
+
+  <rect x="630" y="600" width="12" height="12" rx="2" fill="#f39c12" opacity="0.3" stroke="#f39c12" stroke-width="1"/>
+  <text x="648" y="611" fill="#999" font-size="9">DNS</text>
+
+  <line x1="730" y1="606" x2="760" y2="606" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="768" y="611" fill="#999" font-size="9">Traffic flow</text>
+
+  <line x1="860" y1="606" x2="890" y2="606" stroke="#666" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="898" y="611" fill="#999" font-size="9">Internal routing</text>
+</svg>
