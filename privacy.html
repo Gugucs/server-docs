@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Privacy Policy - Gugucs Mac mini Home Server</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1 id="privacy-policy">Privacy Policy</h1>
+<p><em>English summary: This application (“AIlin”) is a personal
+automation tool operated solely by the domain owner for the owner’s own
+use. It accesses Google Calendar only to create and delete events on the
+owner’s own calendar. No user data is sold or shared with third parties.
+All data and OAuth tokens are stored locally on the owner’s own
+server.</em></p>
+<p>Last updated: 2026-10-04</p>
+<hr />
+<h2 id="アプリケーションについて">アプリケーションについて</h2>
+<p><strong>AIlin</strong>
+は、本ドメイン（gugucs.com）の管理者が<strong>自身の用途専用</strong>に運用する個人自動化ツールです。一般向けに提供するサービスではなく、利用者は管理者本人のみです。</p>
+<h2 id="アクセスする-google-データと利用目的">アクセスする Google
+データと利用目的</h2>
+<p>OAuth 認証を通じて、以下のスコープに基づき Google
+データへアクセスします。</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>https://www.googleapis.com/auth/calendar.events</code></td>
+<td>管理者自身の Googleカレンダーに予定を作成・削除するため</td>
+</tr>
+<tr>
+<td><code>https://www.googleapis.com/auth/calendar.readonly</code></td>
+<td>カレンダーの一覧を読み取り、登録先カレンダーを特定するため</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>アクセス対象は<strong>管理者自身のカレンダーのみ</strong>です。他のユーザーのデータにはアクセスしません</li>
+<li>カレンダー以外の Google データ（Gmail・Drive
+等）にはアクセスしません</li>
+</ul>
+<h2 id="データの取り扱い">データの取り扱い</h2>
+<ul>
+<li><strong>外部への提供なし</strong>:
+取得したデータを第三者へ販売・提供・送信しません</li>
+<li><strong>ローカル保存</strong>: メモ・予定データおよび OAuth
+トークンは、管理者が自宅で運用するサーバーのローカルディスクにのみ保存されます（トークンはパーミッション
+0600）</li>
+<li><strong>AI 処理について</strong>:
+予定の抽出にあたり、<strong>個人情報をマスク済みのテキストのみ</strong>を外部の大規模言語モデルサービスへ送信します。画像・音声・生テキストを外部へ送信しません</li>
+<li><strong>ログ</strong>:
+カレンダー登録・削除の履歴はローカルのログファイルに記録されます</li>
+</ul>
+<h2 id="権限の取り消し">権限の取り消し</h2>
+<p>管理者はいつでも Google アカウントの<a
+href="https://myaccount.google.com/permissions">サードパーティ
+アクセス設定</a>から本アプリケーションの権限を取り消せます。取り消し後は即時にアクセスできなくなります。</p>
+<h2 id="お問い合わせ">お問い合わせ</h2>
+<p>本ドメイン（gugucs.com）の管理者まで。Google Auth Platform
+のデベロッパー連絡先メールアドレスが管理者の連絡先です。</p>
+<hr />
+<p><em>Last updated: 2026-10-04</em></p>
+</body>
+</html>

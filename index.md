@@ -120,4 +120,8 @@ CPU、メモリ、ディスク、ネットワーク、Docker コンテナの状�
 
 ---
 
+[Privacy Policy](privacy.html)
+
+---
+
 *Last updated: 2026-03-01*
